@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Website</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial;
+}
+.logo{
+    color:#ff3c00;
+    font-weight:bold;
+}
+.hero{
+height:60vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+.title{
+    font-size:3rem;
+    animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+from{text-shadow:0 0 10px red;}
+to{text-shadow:0 0 30px orange;}
+}
+.btn-3d{
+padding:10px 20px;
+background:linear-gradient(45deg,#ff0000,#ff6600);
+border:none;color:white;border-radius:10px;
+box-shadow:0 5px 0 #990000;
+transition:0.2s;
+}
+.btn-3d:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgb(177, 2, 2);
+}
+.btn-3d:active{
+    transform:translateY(3px);
+    box-shadow:0 2px 0 #990000;
+}
+.food-card{
+background:#0a0101;
+border:none;
+border-radius:15px;
+transition:0.4s;
+}
+.food-card:hover{
+transform:scale(1.05) rotateX(5deg);
+box-shadow:0 10px 30px rgba(255,0,0,0.5);
+}
+.food-card img{
+    border-radius:15px 15px 0 0;
+}
+h2{
+    color:#ff3c00;
+}
+.card-body h6,
+.card-body p {
+    color: white;
+    font-weight: bold;
+}
+.food-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.btn-3d:not(:last-child) {
+    margin-right: 10px;
+}
+.navbar h6 {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar h6:hover {
+    color: rgba(255, 64, 0, 0.975);
+}
+
+.navbar {
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+
+.logo {
+    transition: 0.3s;
+}
+.logo:hover {
+    transform: scale(1.1) rotate(-2deg);
+    text-shadow: 0 0 15px red, 0 0 25px orange;
+}
+
+
+.navbar h6 {
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+
+.navbar h6:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: #ff6600;
+    text-shadow: 0 0 10px red;
+}
+
+
+.navbar h6:active {
+    transform: translateY(2px);
+}
+
+
+.navbar h6::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, red, orange);
+    transition: 0.3s;
+}
+
+.navbar h6:hover::after {
+    width: 100%;
+}
+.logo,
+.navbar h6 {
+    font-style: italic;
+}
+.hi{
+    font-size:1.25rem;
+    animation:glow 2s infinite alternate;
+}
+</style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-dark bg-black px-4">
+    <div class="w-100 d-flex align-items-center">
+        
+        <h2 class="logo mb-0">🔥 Tinakapothe Nashtam</h2>
+
+        <div class="d-flex gap-4 ms-auto">
+            <h6 class="mb-0">Home</h6>
+            <h6 class="mb-0">Menu</h6>
+            <h6 class="mb-0">About</h6>
+            <h6 class="mb-0">Contact</h6>
+            <h6 class="mb-0">&#128722</h6>
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="hero">
+<div>
+<h1 class="title">Welcome to Tinakapothe Nashtam</h1>
+<p class="hi">Hot • Spicy • Delicious</p>
+
+</div>
+</div>
+
+
+
+<div>
+
+<h2 class="mt-5 fst-italic">🍰 Desserts</h2><br>
+<div class="row g-4">
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/chocolatecake.jpg">
+        <div class="card-body text-center">
+            <h6>Chocolate Cake</h6>
+            <p>₹120</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/icecream.jpg">
+        <div class="card-body text-center">
+            <h6>Ice Cream</h6>
+            <p>₹80</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/browine.jpg">
+        <div class="card-body text-center">
+            <h6>Brownie</h6>
+            <p>₹100</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/donut.jpg">
+        <div class="card-body text-center">
+            <h6>Donut</h6>
+            <p>₹90</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+</div>
+<h2 class="mt-5 fst-italic">🍟 Snacks</h2><br>
+<div class="row g-4">
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/frenchfries.jpg">
+        <div class="card-body text-center">
+            <h6>French Fries</h6>
+            <p>₹99</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/samosa.jpg">
+        <div class="card-body text-center">
+            <h6>Samosa</h6>
+            <p>₹30</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/pakora.jpg">
+        <div class="card-body text-center">
+            <h6>Pakora</h6>
+            <p>₹50</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/cutlet.jpg">
+        <div class="card-body text-center">
+            <h6>Cutlet</h6>
+            <p>₹60</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<br>
+
+<h2 class="mt-5 fst-italic">🍕 Pizza</h2><br>
+<div class="row g-4">
+<!-- Repeat 10 -->
+<div class="col-md-3 col-sm-6" >
+    <div class="card food-card">
+        <img src="pics/Margherita.jpg">
+        <div class="card-body text-center">
+            <h6>Margherita</h6>
+            <p>₹149</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/cheese.jpg">
+        <div class="card-body text-center">
+            <h6>Cheese Burst</h6>
+            <p>₹199</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/veg.jpg">
+        <div class="card-body text-center">
+            <h6>Veg Deluxe</h6>
+            <p>₹179</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/chiken.jpg">
+        <div class="card-body text-center">
+            <h6>Chicken Pizza</h6>
+            <p>₹229</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<h2 class="mt-5 fst-italic">🍔 Burgers</h2><br>
+<div class="row g-4">
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/vegbug.jpg">
+        <div class="card-body text-center">
+            <h6>Veg Burger</h6>
+            <p>₹79</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/chikenbug.jpg">
+        <div class="card-body text-center">
+            <h6>Chicken Burger</h6>
+            <p>₹129</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/cheesebug.jpg">
+        <div class="card-body text-center">
+            <h6>Cheese Burger</h6>
+            <p>₹149</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/doublepatty.jpg">
+        <div class="card-body text-center">
+            <h6>Double Patty</h6>
+            <p>₹179</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+</div>
+<h2 class="mt-5 fst-italic">🍛 Biryani</h2><br>
+<div class="row g-4">
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/chikenbiryani.jpg">
+        <div class="card-body text-center">
+            <h6>Chicken Biryani</h6>
+            <p>₹199</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/muttonbiryani.jpg">
+        <div class="card-body text-center">
+            <h6>Mutton Biryani</h6>
+            <p>₹249</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/eggbiryani.jpg">
+        <div class="card-body text-center">
+            <h6>Egg Biryani</h6>
+            <p>₹149</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/vegbiryani.jpg">
+        <div class="card-body text-center">
+            <h6>Veg Biryani</h6>
+            <p>₹139</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<h2 class="mt-5 fst-italic">🥤 Drinks</h2><br>
+<div class="row g-4">
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/orangejuice.jpg">
+        <div class="card-body text-center">
+            <h6>Orange Juice</h6>
+            <p>₹60</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/milkshake.jpg">
+        <div class="card-body text-center">
+            <h6>Milkshake</h6>
+            <p>₹120</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/softdrinks.jpg">
+        <div class="card-body text-center">
+            <h6>Soft Drink</h6>
+            <p>₹50</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+    <div class="card food-card">
+        <img src="pics/coffee.jpg">
+        <div class="card-body text-center">
+            <h6>Coffee</h6>
+            <p>₹70</p>
+            <button class="btn-3d">Order</button>
+            <button class="btn-3d">Cart</button>
+        </div>
+    </div>
+</div>
+
+</div><br>
+
+<footer class="text-center p-3 bg-black">
+<p>🔥 &copy 2026 Tinakapothe Nashtam 🔥</p>
+</footer>
+
+</body>
+</html>
